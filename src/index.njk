@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Pinkkard Design Blog
+---
+
+<section class="pd-hero pd-section">
+  <div class="wrap">
+    <span class="pd-pill">Welcome</span>
+    <h1 class="pd-display">I am Janekia Pinkard</h1>
+    <p class="pd-muted">Web Designer</p>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="wrap">
+    {% set posts = [] %}
+    {% for p in collections.all %}
+      {% if p.inputPath and ("/posts/" in p.inputPath) %}
+        {% set posts = posts.concat([p]) %}
+      {% endif %}
+    {% endfor %}
+    {% set posts = posts | reverse %}
+
+    {% for p in posts %}
+      <article class="pd-card post-card pd-hover-raise">
+        <div class="post-meta">{{ p.date | fmtDate }}</div>
+        <h2 class="post-title">{{ p.data.title or p.fileSlug }}</h2>
+        <div class="post-content">{{ p.templateContent | safe }}</div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

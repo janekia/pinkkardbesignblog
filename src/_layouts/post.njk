@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title | default("Post") }} • {{ site.title | default("Pinkkard Design Blog") }}</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="/">{{ site.title | default("Pinkkard Design Blog") }}</a></h1>
+  </header>
+
+  <main class="container">
+    <article class="post">
+      <h1>{{ title }}</h1>
+      <p class="meta">{{ page.date | fmtDate }}</p>
+      <div class="post-content">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
+
+  <footer><p>© PinkkardDesign</p></footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "pinkkarddesign-blog",
+  "version": "1.0.0",
+  "description": "PinkkardDesign Blog using Eleventy",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}
+

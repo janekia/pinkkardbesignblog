@@ -1,0 +1,12 @@
+{
+"title": "Pinkkard Design Blog",
+"tagline": "Web design tips, client notes, and behind-the-scenes.",
+"author": "Janekia Pinkard",
+"baseUrl": "https://pinkkarddesign.com",
+"brand": {
+"name": "PinkkardDesign",
+"accent": "#e35183",
+"dark": "#1e1e24",
+"light": "#ffffff"
+}
+}
