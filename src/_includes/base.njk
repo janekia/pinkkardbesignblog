@@ -1,19 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Basic Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{% if title %}{{ title }} • {% endif %}Pinkkard Design Blog</title>
+  <title>{{ title or "Pinkkard Design Blog | Web Design Tips & Branding Inspiration" }}</title>
+  <meta name="description" content="{{ description or 'Pinkkard Design Blog — crafted by Janekia Pinkard. Explore web design tips, branding advice, portfolio insights, and creative business strategies.' }}">
+  <meta name="keywords" content="web design, branding, small business, portfolio, design blog, Pinkkard Design, UX, UI, entrepreneurship, creative business, marketing" />
+  <meta name="author" content="Janekia Pinkard" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{ canonical or 'https://pinkkarddesignblog.site/' }}" />
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Pinkkard Design Blog" />
+  <meta property="og:title" content="{{ title or 'Pinkkard Design Blog' }}" />
+  <meta property="og:description" content="{{ description or 'Explore design inspiration, creative process tips, and branding advice from Janekia at Pinkkard Design.' }}" />
+  <meta property="og:url" content="{{ canonical or 'https://pinkkarddesignblog.site/' }}" />
+  <meta property="og:image" content="{{ og_image or '/assets/PDBL.png' }}" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWMLFF0MEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XWMLFF0MEN');
+</script>
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title or 'Pinkkard Design Blog' }}" />
+  <meta name="twitter:description" content="{{ description or 'Creative insights, branding, and design inspiration from Pinkkard Design.' }}" />
+  <meta name="twitter:image" content="{{ twitter_image or '/assets/PDBL.png' }}" />
+  <meta name="twitter:creator" content="@pinkkarddesign" />
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.png">
+<meta name="theme-color" content="#000000">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/styles.css" />
-  <!-- Fonts for display options -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD (for Google Knowledge Panels & SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Pinkkard Design Blog",
+    "url": "https://pinkkarddesignblog.site/",
+    "description": "A web design and branding blog by Janekia Pinkard featuring creative insights, tutorials, and inspiration for small businesses and entrepreneurs.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pinkkard Design",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pinkkarddesignblog.site/assets/PDBL.png"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Janekia Pinkard",
+      "url": "https://pinkkarddesign.com"
+    }
+  }
+  </script>
 </head>
 <body class="theme-soft-luxe"> {# change to theme-modern-min or theme-organic anytime #}
   <header class="nav">
     <div class="wrap">
       <a class="brand" href="/">
-        <img src="assets/pinkkard_design_logo.png" alt="Pinkkard Design logo" style="height:80px;">
+        <img src="assets/pdbl.png" alt="Pinkkard Design logo" style="height:80px;">
 </a>
       <nav class="links">
         
